@@ -1,13 +1,21 @@
 
 public class EmployeeWage {
 	public static void main(String[] args) {
-		int employeePresent = 1;
-		int a = (int)(Math.random()*2);
-		if (employeePresent == a) {
-			 System.out.println("Employee is present");
+	// Constraints
+	int Is_Full_Time = 1;
+	int Wage_Per_Hour = 20;
+	// Variables
+	int empHrs = 0;
+	int empWage = 0;
+		// Computation
+		double empCheck = Math.floor(Math.random() * 10) %2;
+		if (empCheck == Is_Full_Time) {
+			 empHrs = 8;
 		}
 		else {
-			System.out.println("Employee is absent");
+			empHrs = 0;
 		}
+	empWage = empHrs * Wage_Per_Hour;
+	System.out.println("Employee Wage: " + empWage);
 	}
 }
